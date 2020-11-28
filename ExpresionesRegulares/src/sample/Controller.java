@@ -20,7 +20,10 @@ public class Controller {
     Label lblResultado;
 
     @FXML protected void initialize(){
-        lista.getItems().addAll("Ejercicio 1","Ejercicio 2","Validad password","Grupo",
+        lista.getItems().addAll("Ejercicio 1",
+                "Ejercicio 2",
+                "Validad password",
+                "Grupo",
                 "Una palabra que no comience con db-",
                 "Una palabra termine con cout",
                 "Validar que hayan escrito dos nombres ejemplo villa",
@@ -30,7 +33,17 @@ public class Controller {
                 "Validar que se haya escrito correctamente un numero Hezadecimal",
                 "Validar que una operacion de 1 digito por ejemplo 1+2,2-3,5*5, etc",
                 "Validar que se ingrese correctamente el numero de control de ITSNCG",
-                "Validar que se registre correctamente el numero CURP");
+                "Validar que se registre correctamente el numero CURP",
+                "Validar que haya insertado x cantidad de pesos(Ejemplo: $34.00mxn)",
+                "Validar ek numero de una tarjeta de cradito",
+                "Validar una etiqueta HTML",
+                "Validar un color Hexadecimal",
+                "Validar un link(ejemplo: http//novoyapasar.com)",
+                "Validar el Query Insert into de SQL",
+                "valiadr Sentencia if de x variable con x condicion(ejemplo:if(nopaso==true){",
+                "Validar que se haya ecrito na frase con salto de linea(ejemplo:hola /n mundo",
+                "Validar que se haya escrito una url con un video de youtube(ejemplo: http://www.youtube.com/watch?v=jNQXAC9IVRw ");
+
 
     }
     public void procesar (ActionEvent event){
@@ -98,6 +111,42 @@ public class Controller {
             }
             case 13:{
                 expresion="^([A-Z][AEIOUX][A-Z]{2}\\d{2}(?:0[1-9]|1[0-2])(?:0[1-9]|[12]\\d|3[01])[HM](?:AS|B[CS]|C[CLMSH]|D[FG]|G[TR]|HG|JC|M[CNS]|N[ETL]|OC|PL|Q[TR]|S[PLR]|T[CSL]|VZ|YN|ZS)[B-DF-HJ-NP-TV-Z]{3}[A-Z\\d])(\\d)$";
+                break;
+            }
+            case 14:{
+                expresion="^[$][0-9]+(mxn)";
+                break;
+            }
+            case 15:{
+                expresion="^[0-9]{4}[0-9]{4}[0-9]{4}[0-9]{4}";
+                break;
+            }
+            case 16:{
+                expresion="^(<p>)[a-zA-Z0-9 ]+(<p/>)$";
+                break;
+            }
+            case 17:{
+                expresion="^#[0-9A-F]{6}$";
+                break;
+            }
+            case 18:{
+                expresion="^(http://)[0-9A-Fa-z]+(.com)$";
+                break;
+            }
+            case 19:{
+                expresion="^(INSERT INTO |insert into )[0-9A-Fa-z ]+\\([0-9A-Fa-z ,]+\\) (VALUES |values )\\([0-9A-Fa-z ,]+\\)";
+                break;
+            }
+            case 20:{
+                expresion="^(if)\\([a-zA-Z0-9]+(==)(true|false)\\)\\{[ a-zA-Z0-9]+\\}";
+                break;
+            }
+            case 21:{
+                expresion="^[a-zA-Z0-9 \n]+";
+                break;
+            }
+            case 22:{
+                expresion="^(https://|http://)(www.youtube.com/watch\\?v=)[a-zA-Z0-9]+";
                 break;
             }
         }
