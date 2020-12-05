@@ -42,7 +42,15 @@ public class Controller {
                 "Validar el Query Insert into de SQL",
                 "valiadr Sentencia if de x variable con x condicion(ejemplo:if(nopaso==true){",
                 "Validar que se haya ecrito na frase con salto de linea(ejemplo:hola /n mundo",
-                "Validar que se haya escrito una url con un video de youtube(ejemplo: http://www.youtube.com/watch?v=jNQXAC9IVRw ");
+                "Validar que se haya escrito una url con un video de youtube(ejemplo: http://www.youtube.com/watch?v=jNQXAC9IVRw ",
+                "^[a-z0-9_-]{3,16}$",
+                "^[a-z0-9-]+$",
+                "Validar correo ",
+                "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[$@$!%*?&])[A-Za-z\\d$@$!%*?&]{8,}",
+                "[Rr][Gg][Bb][(](((([\\\\d]{1,3})[1,]{0,1})[\\\\s]*){3})[)]",
+                "^([0-9]|0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$",
+                "^[-+]?([1-8]?\\d(\\.\\d+)?|90(\\.0+)?),\\s*[-+]?(180(\\.0+)?|((1[0-7]\\d)|([1-9]?\\d))(\\.\\d+)?)$",
+                "(?=.*[a-z])");
 
 
     }
@@ -147,6 +155,38 @@ public class Controller {
             }
             case 22:{
                 expresion="^(https://|http://)(www.youtube.com/watch\\?v=)[a-zA-Z0-9]+";
+                break;
+            }
+            case 23:{
+                expresion="^[a-z0-9_-]{3,16}$";
+                break;
+            }
+            case 24:{
+                expresion="^[a-z0-9-]+$";
+                break;
+            }
+            case 25:{
+                expresion="^([a-z0-9_\\.-]+)@([\\da-z\\.-]+)\\.([a-z\\.]{2,6})$";
+                break;
+            }
+            case 26:{
+                expresion="^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[$@$!%*?&])[A-Za-z\\d$@$!%*?&]{8,}";
+                break;
+            }
+            case 27:{
+                expresion="[Rr][Gg][Bb][(](((([\\\\d]{1,3})[1,]{0,1})[\\\\s]*){3})[)]";
+                break;
+            }
+            case 28:{
+                expresion="^([0-9]|0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$";
+                break;
+            }
+            case 29:{
+                expresion="^[-+]?([1-8]?\\d(\\.\\d+)?|90(\\.0+)?),\\s*[-+]?(180(\\.0+)?|((1[0-7]\\d)|([1-9]?\\d))(\\.\\d+)?)$";
+                break;
+            }
+            case 30:{
+                expresion="^(?=.*[a-z])";
                 break;
             }
         }
