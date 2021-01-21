@@ -8,7 +8,7 @@ public class Configs {
             , "Parabrisas", "Rin", "Rines", "Amortiguador", "Amortiguadores",
             "de","Negro", "Negros","Negra","Negras", "Naranja", "Naranjas", "Rojo", "Rojos", "Roja", "Rojas", "Azul" , "Azules",
             "y","1","2","3","4","5","6","7","8","9","Nueva", "nuevo", "Nuevas",
-            "Nuevos", "seminueva", "seminuevo","Ford150","Mustang", "Sentra","Altima"
+            "Nuevos", "seminueva", "seminuevo","Ford150","Mustang", "Sentra","Altima","print","sarten","cebolla","declarar","como","cocinar"
 
             /*"abstract", "assert", "boolean", "break", "byte",
             "case", "catch", "char", "class", "const",
@@ -41,17 +41,23 @@ public class Configs {
     );
 
     public static final String sampleCode = String.join("\n", new String[] {
+//            "print(10)",
+//            "declarar x como cebolla",
+//            "cocinar(x)",
 
-            "4 Llantas de Y",
-            "2 X de Ford150",
-            "4 X de Y",
-            "3 Puertas de Y",
-            "1 Rin de Altima",
-            "2 Puertas Nuevas de Y",
-            "1 X Nueva de Sentra",
-            "4 Rines de X",
-            "4 X de Y",
-            "2 Puerta de Mustang y Y"
+//
+            "declarar x Llantas de Altima",
+            "declarar y Puertas de Ford150",
+            "declarar z Puerta Roja",
+            "declarar e Rines de Mustang",
+            "declarar v Parabrisa de Sentra",
+            "Puertas(x)",
+
+
+//            "1 X Nueva de Sentra",
+//            "4 Rines de X",
+//            "4 X de Y",
+//            "2 Puerta de Mustang y Y"
 //            "package com.example;",
 //            "",
 //            "import java.util.*;",
@@ -78,16 +84,31 @@ public class Configs {
 
 
     public static String[] expresiones={
-            "[2-9] Llantas de [A-Za-z]+",
-            "2 [A-Za-z]+ de Ford150",
-            "4 [A-Za-z]+ de [A-Za-z]+",
-            "[2-9] Puertas de [A-Za-z]+",
-            "1 [A-Za-z]+ de Altima",
-            "2 Puertas (Nuevas|Seminuevos) de [A-Za-z]+",
-            "1 [A-Za-z]+ Nueva de Sentra",
-            "4 Rines de [A-Za-z]+",
-            "[2-9] [A-Za-z]+ de [A-Za-z]+",
-            "2 [A-Za-z]+ de Mustang y [A-Za-z]+"
+//            "[2-9] Llantas de [A-Za-z]+",
+//            "2 [A-Za-z]+ de Ford150",
+//            "4 [A-Za-z]+ de [A-Za-z]+",
+//            "[2-9] Puertas de [A-Za-z]+",
+//            "1 [A-Za-z]+ de Altima",
+//            "2 Puertas (Nuevas|Seminuevos) de [A-Za-z]+",
+//            "1 [A-Za-z]+ Nueva de Sentra",
+//            "4 Rines de [A-Za-z]+",
+//            "[2-9] [A-Za-z]+ de [A-Za-z]+",
+//            "2 [A-Za-z]+ de Mustang y [A-Za-z]+"
 
+
+
+//            "sumar [a-z]{1,} mas [a-z]{1,}",
+
+//            "declarar [a-z]{1,} como (sarten|cebolla)",
+//            "print[(][a-z0-9]{1,}[)]",
+//            "cocinar[(][a-z0-9]{1,}[)]"
+
+
+            "declarar [0-9a-z]{1,} Llantas de Altima",
+            "declarar [0-9a-z]{1,} Puertas de (Ford150|Sentra)",
+            "declarar [0-9a-z]{1,} Puerta (Roja|Azul)",
+            "declarar [0-9a-z]{1,} Rines de Mustang",
+            "declarar [0-9a-z]{1,} Parabrisa de Sentra",
+            "Puertas[(][a-z0-9]{1,}[)]",
     };
 }
